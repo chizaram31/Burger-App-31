@@ -1,1 +1,1102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wonder Buka Burger</title>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="logo">GourmentBurger</div>
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Menu</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+        <a href="#order" class="cta">Order Now</a>
+    </nav>
+
+    <main class="menu-view">
+        <h1>Our Menu</h1>
+        
+        <div class="menu-categories">
+            <button class="category active" data-category="burgers">Burgers</button><br>
+            <button class="category" data-category="sides">Sides</button><br>
+            <button class="category" data-category="beverages">Beverages</button><br>
+            <button class="category" data-category="desserts">Desserts</button>
+        </div>
+
+        <div class="menu-items" id="burgers">
+            <div class="menu-item">
+                <img src="images/pic1.jpeg" alt="Classic Burger">
+                <h3>Classic Burger</h3>
+                <p class="description">A juicy classic beef patty with fresh lettuce, tomatoes, and our secret sauce.</p>
+                <p class="price">$10.99</p>
+                <button class="add-to-cart"><a href="cart.html">Add to Cart</a></button>
+            </div>
+            <div class="menu-item">
+                <img src="images/pic3.jpeg" alt="Cheese Burger">
+                <h3>Cheese Burger</h3>
+                <p class="description">A rich and cheesy delight with melted cheddar and crisp veggies.</p>
+                <p class="price">$11.99</p>
+                <button class="add-to-cart"><a href="cart.html">Add to Cart</a></button>
+            </div>
+       
+        </div> <br>
+
+        <div class="menu-items" id="sides">
+            <div class="menu-item">
+                <img src="images/pic2.jpeg" alt="French Fries">
+                <h3>French Fries</h3>
+                <p class="description">Golden crispy fries, perfectly seasoned to perfection.</p>
+                <p class="price">$3.99</p>
+                <button class="add-to-cart"><a href="cart.html">Add to Cart</a></button>
+            </div>
+            <div class="menu-item">
+                <img src="./images/pic4.jpeg" alt="Onion Rings">
+                <h3>Onion Rings</h3>
+                <p class="description">Crispy, golden onion rings with a crunchy coating.</p>
+                <p class="price">$4.99</p>
+                <button class="add-to-cart"><a href="cart.html">Add to Cart</a></button>
+            </div>
+        </div>
+    </main>
+</body>
+</html>
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f9;
+    color: #333;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #ff6600;
+    padding: 1rem 2rem;
+}
+
+.logo {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #fff;
+}
+
+.navbar ul {
+    display: flex;
+    list-style: none;
+}
+
+.navbar ul li {
+    margin: 0 1rem;
+}
+
+.navbar ul li a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 1rem;
+    transition: color 0.3s;
+}
+
+.navbar ul li a:hover {
+    color: #333;
+}
+
+.cta {
+    background-color: #333;
+    color: #fff;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 1rem;
+    transition: background-color 0.3s;
+}
+
+.cta:hover {
+    background-color: #ff3300;
+}
+
+.menu-view {
+    padding: 2rem;
+    text-align: center;
+}
+
+.menu-view h1 {
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+}
+
+.menu-categories {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 2rem;
+}
+
+.category {
+    background-color: #ff6600;
+    color: #fff;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.category:hover {
+    background-color: #ff3300;
+}
+
+.category.active {
+    background-color: #333;
+}
+
+.menu-items {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+}
+
+.menu-item {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    text-align: center;
+    transition: transform 0.3s;
+}
+
+.menu-item:hover {
+    transform: translateY(-10px);
+}
+
+.menu-item img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+}
+
+.menu-item h3 {
+    font-size: 1.5rem;
+    margin: 1rem 0;
+}
+
+.menu-item .description {
+    font-size: 0.9rem;
+    color: #666;
+    padding: 0 1rem;
+    margin-bottom: 1rem;
+}
+
+.menu-item .price {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+a{
+    text-decoration: none;
+   
+    color: #fff;
+    border: none;
+    font-size: 1rem;
+   
+    cursor: pointer;
+   
+
+}
+
+.add-to-cart {
+    text-decoration: none;
+    background-color: #ff6600;
+    color: #fff;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-bottom: 1rem;
+}
+
+.add-to-cart:hover {
+    background-color: #ff3300;
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 1rem 0;
+}
+
+footer p {
+    font-size: 0.9rem;
+}
+
+@media (max-width: 768px) {
+    .navbar ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .menu-categories {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .menu-items {
+        grid-template-columns: 1fr;
+    }
+}
+@media (max-width: 768px) {
+    .navbar {
+        flex-wrap: wrap;
+    }
+
+    .navbar ul {
+        flex-direction: column;
+        width: 100%;
+        display: none;
+    }
+
+    .navbar ul li {
+        margin: 0.5rem 0;
+    }
+
+    .navbar ul.active {
+        display: flex;
+    }
+
+    .navbar .menu-toggle {
+        display: block;
+        cursor: pointer;
+        font-size: 1.5rem;
+        color: #fff;
+    }
+
+    .navbar .menu-toggle.active {
+        color: #333;
+    }
+
+    .cta {
+        margin-top: 1rem;
+    }
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wonder Buka Burger - Cart</title>
+    <link rel="stylesheet" href="./css/cart.css">
+</head>
+<body>
+
+    
+    <nav class="navbar">
+        <div class="logo">GourmentBurger</div>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="index.html">Menu</a></li>
+            <li><a href="cart.html" class="cta">Cart</a></li>
+        </ul>
+    </nav>
+
+    <section class="cart-view">
+        <h1>Your Cart</h1>
+
+        <div class="cart-items">
+            <div class="cart-item">
+                <img src="images/pic1.jpeg" alt="Burger Image">
+                <div class="cart-item-details">
+                    <h3 class="cart-item-name">Classic Cheeseburger</h3>
+                    <p class="cart-item-price">$8.99</p>
+                </div>
+                <div class="cart-item-quantity">
+                    <button>-</button>
+                    <span>1</span>
+                    <button>+</button>
+                </div>
+                <p class="cart-item-total">$8.99</p>
+            </div>
+
+            <div class="cart-item">
+                <img src="images/pic2.jpeg" alt="Fries Image">
+                <div class="cart-item-details">
+                    <h3 class="cart-item-name">Crispy Fries</h3>
+                    <p class="cart-item-price">$3.49</p>
+                </div>
+                <div class="cart-item-quantity">
+                    <button>-</button>
+                    <span>2</span>
+                    <button>+</button>
+                </div>
+                <p class="cart-item-total">$6.98</p>
+            </div>
+
+        </div>
+
+        <div class="cart-total">
+            <p>Total: <strong>$15.97</strong></p>
+        </div>
+
+        <button class="checkout-button">Proceed to Checkout</button>
+        <button class="checkout-button"><a href="menu.html">Back to menu</a></button>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 GourmentBurger. All Rights Reserved.</p>
+    </footer>
+
+</body>
+</html>
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f9;
+    color: #333;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #ff6600;
+    padding: 1rem 2rem;
+}
+
+.logo {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #fff;
+}
+
+.navbar ul {
+    display: flex;
+    list-style: none;
+}
+
+.navbar ul li {
+    margin: 0 1rem;
+}
+
+.navbar ul li a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 1rem;
+    transition: color 0.3s;
+}
+
+.navbar ul li a:hover {
+    color: #333;
+}
+
+.cta {
+    background-color: #333;
+    color: #fff;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 1rem;
+    transition: background-color 0.3s;
+}
+
+.cta:hover {
+    background-color: #ff3300;
+}
+
+.menu-view {
+    padding: 2rem;
+    text-align: center;
+}
+
+.menu-view h1 {
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+}
+
+.menu-categories {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 2rem;
+}
+
+.category {
+    background-color: #ff6600;
+    color: #fff;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.category:hover {
+    background-color: #ff3300;
+}
+
+.category.active {
+    background-color: #333;
+}
+
+.menu-items {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+}
+
+.menu-item {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    text-align: center;
+    transition: transform 0.3s;
+}
+
+.menu-item:hover {
+    transform: translateY(-10px);
+}
+
+.menu-item img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+}
+
+.menu-item h3 {
+    font-size: 1.5rem;
+    margin: 1rem 0;
+}
+
+.menu-item .description {
+    font-size: 0.9rem;
+    color: #666;
+    padding: 0 1rem;
+    margin-bottom: 1rem;
+}
+
+.menu-item .price {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+
+.add-to-cart {
+    background-color: #ff6600;
+    color: #fff;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-bottom: 1rem;
+}
+
+.add-to-cart:hover {
+    background-color: #ff3300;
+}
+
+.cart-view {
+    padding: 2rem;
+    text-align: center;
+}
+
+.cart-view h1 {
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+}
+
+.cart-items {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.cart-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 1rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.cart-item img {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+}
+
+.cart-item-details {
+    flex: 1;
+    margin-left: 1rem;
+}
+
+.cart-item-name {
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+.cart-item-price {
+    font-size: 1rem;
+    color: #666;
+}
+
+.cart-item-quantity {
+    display: flex;
+    align-items: center;
+}
+
+.cart-total {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-top: 2rem;
+}
+
+.checkout-button {
+    background-color: #ff6600;
+    color: #fff;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    font-size: 1.2rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-top: 2rem;
+}
+
+.checkout-button:hover {
+    background-color: #ff3300;
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 1rem 0;
+}
+
+footer p {
+    font-size: 0.9rem;
+}
+a{
+    text-decoration: none;
+   
+    color: #fff;
+    border: none;
+    font-size: 1rem;
+   
+    cursor: pointer;
+   
+
+}
+
+@media (max-width: 768px) {
+    .navbar ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .menu-categories {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .menu-items {
+        grid-template-columns: 1fr;
+    }
+
+    .cart-item {
+        flex-direction: column;
+        align-items: center;
+    }
+} 
+
+@media (max-width: 768px) {
+    .navbar {
+        flex-wrap: wrap;
+    }
+
+    .navbar ul {
+        flex-direction: column;
+        width: 100%;
+        display: none;
+    }
+
+    .navbar ul li {
+        margin: 0.5rem 0;
+    }
+
+    .navbar ul.active {
+        display: flex;
+    }
+
+    .navbar .menu-toggle {
+        display: block;
+        cursor: pointer;
+        font-size: 1.5rem;
+        color: #fff;
+    }
+
+    .navbar .menu-toggle.active {
+        color: #333;
+    }
+
+    .cta {
+        margin-top: 1rem;
+    }
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wonder Buka Burger Home</title>
+    <link rel="stylesheet" href="./css/index1.css">
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="logo">GourmentBurger</div>
+        <ul>
+            <li><a href="index.html" class="cta">Home</a></li>
+            <li><a href="menu.html">Menu</a></li>
+            <li><a href="cart.html">Cart</a></li>
+        </ul>
+    </nav>
+
+    <section class="hero">
+        <h1>Welcome to GourmentBurger</h1>
+        <p>Delicious burgers, sides, and drinks delivered to your door.</p>
+        <a href="menu.html" class="cta-button">Order Now</a>
+    </section>
+
+    <section class="featured-menu">
+        <h2>Our Bestsellers</h2>
+        <div class="menu-items">
+            <div class="menu-item">
+                <img src="images/pic1.jpeg" alt="Burger Image">
+                <h3>Classic Cheeseburger</h3>
+                <p class="description">Juicy beef patty, cheddar cheese, fresh lettuce, and tomatoes.</p>
+                <p class="price">$8.99</p>
+                <a href="menu.html" class="add-to-cart">Order Now</a>
+            </div>
+
+            <div class="menu-item">
+                <img src="images/pic4.jpeg" alt="Veggie Burger Image">
+                <h3>Veggie Delight</h3>
+                <p class="description">A delicious plant-based burger with fresh toppings.</p>
+                <p class="price">$9.49</p>
+                <a href="menu.html" class="add-to-cart">Order Now</a>
+            </div>
+
+            <div class="menu-item">
+                <img src="images/pic3.jpeg" alt="Bacon Burger Image">
+                <h3>Bacon Lover's Burger</h3>
+                <p class="description">Crispy bacon, cheddar cheese, and a juicy beef patty.</p>
+                <p class="price">$10.99</p>
+                <a href="menu.html" class="add-to-cart">Order Now</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="why-choose-us">
+        <h2>Why Choose Us?</h2>
+        <ul>
+            <li>🍔 Gourmet Burgers Made Fresh</li>
+            <li>🚀 Fast and Reliable Delivery</li>
+            <li>🌱 Options for Veggie Lovers</li>
+            <li>💯 Satisfaction Guaranteed</li>
+        </ul>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 GourmentBurger. All Rights Reserved.</p>
+    </footer>
+
+</body>
+</html>
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #ff6600;
+    padding: 1rem 2rem;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #fff;
+}
+
+.navbar ul {
+    display: flex;
+    list-style: none;
+}
+
+.navbar ul li {
+    margin: 0 1rem;
+}
+
+.navbar ul li a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 1rem;
+    transition: color 0.3s;
+}
+
+.navbar ul li a:hover {
+    color: #333;
+}
+
+.cta {
+    background-color: #333;
+    color: #fff;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 1rem;
+    transition: background-color 0.3s;
+}
+
+.cta:hover {
+    background-color: #ff3300;
+}
+
+@media (max-width: 768px) {
+    .navbar {
+        flex-wrap: wrap;
+    }
+
+    .navbar ul {
+        flex-direction: column;
+        width: 100%;
+        display: none;
+    }
+
+    .navbar ul li {
+        margin: 0.5rem 0;
+    }
+
+    .navbar ul.active {
+        display: flex;
+    }
+
+    .navbar .menu-toggle {
+        display: block;
+        cursor: pointer;
+        font-size: 1.5rem;
+        color: #fff;
+    }
+
+    .navbar .menu-toggle.active {
+        color: #333;
+    }
+
+    .cta {
+        margin-top: 1rem;
+    }
+}
+
+.hero-header{
+    text-align: center;
+   
+    font-weight: bolder;
+
+}
+.menu{
+    font-weight: bolder;
+    text-align: center;
+    color: #ff3300;
+    padding-top: 3rem;
+}
+.imgs{
+    width: 17rem;
+    height: 17rem;
+    border-radius: 10px;
+}
+.container{
+    display: flex;
+    justify-content: center;
+}
+.imgbox{
+  margin-top: 3rem;
+  margin-left: 5rem;
+   border: 2px solid #ff3300;
+   padding: 20px 10px;
+   max-width: 300px;
+   border-radius: 10px;
+}
+.add-to-cart{
+    padding: 10px 30px;
+    background-color: #ff3300;
+    border: none;
+    color:#fff;
+    border-radius: 10px;
+}
+
+.menu-categories {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 2rem;
+}
+
+.category {
+    background-color: #ff6600;
+    color: #fff;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.category:hover {
+    background-color: #ff3300;
+}
+
+.category.active {
+    background-color: #333;
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f4f4f9;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color:  #ff3300;
+    color: #fff;
+    padding: 1rem 2rem;
+}
+
+.navbar .logo {
+    font-size: 1.8rem;
+    font-weight: bold;
+}
+
+.navbar ul {
+    display: flex;
+    list-style: none;
+}
+
+.navbar ul li a {
+    color: #fff;
+    text-decoration: none;
+    margin-left: 20px;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    transition: background 0.3s;
+}
+
+.navbar ul li a:hover, .navbar ul li a.cta {
+    background-color: #d62828;
+}
+
+.navbar-toggle {
+    display: none;
+    font-size: 2rem;
+    color: #fff;
+    cursor: pointer;
+}
+
+@media (max-width: 768px) {
+    .navbar ul {
+        flex-direction: column;
+        display: none;
+    }
+
+    .navbar ul.active {
+        display: flex;
+    }
+
+    .navbar-toggle {
+        display: block;
+    }
+}
+
+.hero {
+    text-align: center;
+    padding: 4rem 1rem;
+    background-color: #2a9d8f;
+    color: #fff;
+}
+
+.hero h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.hero p {
+    margin-bottom: 2rem;
+}
+
+.cta-button {
+    background-color:  #ff3300;
+    color: #fff;
+    padding: 0.75rem 1.5rem;
+    text-decoration: none;
+    font-size: 1rem;
+    border-radius: 5px;
+    transition: background 0.3s;
+}
+
+.cta-button:hover {
+    background-color: #d62828;
+}
+
+/* Featured Menu */
+.featured-menu {
+    padding: 2rem 1rem;
+    text-align: center;
+}
+
+.featured-menu h2 {
+    margin-bottom: 2rem;
+    font-size: 2rem;
+}
+
+.menu-items {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+}
+
+.menu-item {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    padding: 1rem;
+    text-align: center;
+}
+
+.menu-item img {
+    width: 100%;
+    border-radius: 10px 10px 0 0;
+}
+
+.menu-item h3 {
+    margin: 1rem 0 0.5rem;
+}
+
+.menu-item .description {
+    font-size: 0.9rem;
+    color: #666;
+    margin-bottom: 1rem;
+}
+
+.menu-item .price {
+    font-size: 1.2rem;
+    color: #e63946;
+    margin-bottom: 1rem;
+}
+
+.add-to-cart {
+    background-color: #2a9d8f;
+    color: #fff;
+    padding: 0.5rem 1rem;
+    text-decoration: none;
+    font-size: 1rem;
+    border-radius: 5px;
+    transition: background 0.3s;
+}
+
+.add-to-cart:hover {
+    background-color: #21867a;
+}
+
+.why-choose-us {
+    background-color: #f4f4f9;
+    padding: 2rem 1rem;
+    text-align: center;
+}
+
+.why-choose-us h2 {
+    margin-bottom: 1.5rem;
+}
+
+.why-choose-us ul {
+    list-style: none;
+    padding: 0;
+}
+
+.why-choose-us ul li {
+    font-size: 1rem;
+    margin-bottom: 0.75rem;
+}
+
+footer {
+    background-color: #ff3300;
+    color: #fff;
+    text-align: center;
+    padding: 1rem 0;
+}
+
+@media (max-width: 768px) {
+    .menu-items {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    }
+
+    .hero h1 {
+        font-size: 2rem;
+    }
+
+    .hero p {
+        font-size: 1rem;
+    }
+}  
+
+
+
+
+
+
+
+}
+
 
